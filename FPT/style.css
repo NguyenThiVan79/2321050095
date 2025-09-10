@@ -121,11 +121,12 @@ footer{
     
 }
 .footer-container {
-    display: flex;
+    
     justify-content: space-between;
     background-color: black;
     width: 70%;
     margin: auto;
+    
 }
 .anh-footer{
     border-top: solid 1% #4b4b4e;
@@ -134,21 +135,10 @@ footer{
     width: 70%;
     margin: auto;
 }
-.noidung1{
-    border-top: solid 1% #4b4b4e;
-    justify-content: space-between;
-    background-color: #131314;
-    width: 70%;
-    margin: auto;
-    
-}
-.cuoi{
-    display:flex;
-    background-color: #131314;
-    width: 70%;
-    margin: auto;
+
+
   
-}
+
 .anh-footer{
     width:10%;
     
