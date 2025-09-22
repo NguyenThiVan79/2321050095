@@ -1,0 +1,65 @@
+body {
+    color:white;
+    background-color: grey;
+    margin:0;
+
+}
+.container{
+    width:40%;
+    padding:40px 0;
+    height:700px;
+    margin: auto;
+    background-color: black;
+}
+.noidung{
+    width:70%;
+    
+    
+    margin:auto;
+    text-align: center;
+
+}
+.form{
+    width:80%;
+    
+    margin:auto;
+    text-align:center;
+}
+.khoi-nut{
+    margin:15px;
+    border-radius: solid grey 1px;
+   
+}
+button{
+    border-radius: 20px ;
+    border: 1px solid gray;
+    background-color: black;
+    color:aliceblue;
+    padding:10px 0;
+    width:100%;
+}
+input {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+.form-duoi{
+    width:80%;
+    background-color: black;
+    margin: auto;
+  
+}
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    text-align: center;
+    padding: 30px;
+}
+
+
+

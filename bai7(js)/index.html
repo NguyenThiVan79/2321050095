@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bài 1 Javascript</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- internal jvscript -->
+   <script>
+    document.writeln("Hello world!"+" <br>");
+    // để khai báo biến JS dùng let hoặc var 
+    // cú pháp: Let tên biến = Giá trị
+    // để nối chuỗi JS dùng dấu +
+    let hoTen = " Nguyen Thi Van" + "<br>";
+    document.writeln(hoTen);
+
+    let soThuNhat = 10;
+    let soThuHai = 5;
+    let ketQua =0;
+    
+    // phép cộng:+
+    // phép trừ -
+    // phép nhân *
+    // phép chia /
+    // phép chia lấy phần dư: %
+    ketQua = soThuNhat - soThuHai;
+    // hoặc có thể gán luon kết quả: let ketQua = soThuNhat + soThuHai;
+    //  tăng 1: ++ có thể đặt :
+                // document.writeln(++ketQua);
+                // hoặc ketQua ++ trước document.writeln(++ketQua);
+    // giảm 1: --
+   soThuNhat += soThuHai;
+    // soThuNhat = soThuNhat + soThuHai;
+    // ==: so sánh giá trị
+    // != si sánh khác nhau
+    // === so sánh cả gtri cả kiểu dữ liệu
+    // !== so sánh khác nhau về cả gtri và dlieu
+    // kiểu phủ định:
+        // let ketQua = true;
+        // document.writeln(!ketQua);
+    // !  > < >= <=
+
+    document.writeln(ketQua + "<br>");
+     let thongTinSinhVien = {
+         hoTen:" Nguyen Thi Van",
+        mssv:"2321050095",
+        gioiTinh: true,
+        tuoi: 20,
+        lop: "Đại học_HTTT_k68"
+    }
+    
+    
+      let diaChiNhaBanVan = {
+        thanhPho:"BN",
+        phuong:"MD",
+        soNha:"xom1",
+    }
+    thongTinSinhVien.diaChi = diaChiNhaBanVan;
+
+    document.writeln("xin chào bạn:" + thongTinSinhVien.hoTen +  " nhà ở " + thongTinSinhVien.diaChi.phuong);
+    let namNay = 2025;
+    document.writeln("Bạn" + thongTinSinhVien.hoTen + " Sinh năm" + (namNay-thongTinSinhVien.tuoi));
+   </script>
+</body>
+</html>
