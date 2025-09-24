@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+        let thongTinDonHang = {
+           maDonHang:" 123456", 
+           thongTinKhachHang : {
+            hoTen:" Nguyen Thi A",
+            soDienThoai:" 0845807886",
+            trangThaiThanhVienThanThiet: true,
+        },
+        danhSachSanPham : {
+            sp1:{
+             maSanPham:"01",
+             tenSanPham:"cà phê",
+             soLuong:"10",
+             giaTien1SanPham:20000
+            },
+            sp2 :{
+                 maSanPham:"02",
+             tenSanPham:"matcha",
+             soLuong:"10",
+             giaTien1SanPham:20000
+            },
+            sp3 :{
+            maSanPham:"03",
+             tenSanPham:"trà sữa",
+             soLuong:"10",
+             giaTien1SanPham:20000
+            }
+        },
+        trangThaiThanhToan: true,
+         diaChiGiaoHang:" 87 LVH "
+    }
+    let tongsp1 = thongTinDonHang.danhSachSanPham.sp1.giaTien1SanPham*thongTinDonHang.danhSachSanPham.sp1.soLuong;
+    tongsp2 = thongTinDonHang.danhSachSanPham.sp2.giaTien1SanPham*thongTinDonHang.danhSachSanPham.sp2.soLuong;
+    tongsp3 = thongTinDonHang.danhSachSanPham.sp3.giaTien1SanPham*thongTinDonHang.danhSachSanPham.sp3.soLuong;
+     document.writeln( tongsp1 + tongsp2 + tongsp3 + "<br>");
+     document.writeln( "Độ dài mã đơn hàng:"+ thongTinDonHang.maDonHang.length + "<br>");
+    var myString = "hello Wed"
+    document.writeln( myString[0] + "<br>"); // lấy vị trí trong chuỗi
+    document.writeln( myString.slice(1,4) +"<br>");//lấy từ giá trị bắt đầu và kết thức trước giá trị kết thúc
+    document.writeln( myString.replace("hello","hi" ) +"<br>");// thay thế chuỗi
+    document.writeln( myString.toUpperCase() +"<br>");// viết hoa hoặc viết thươnhf hết chuỗi UpperCase: viết hoa;LowerCase: viết thường
+    document.writeln(myString.indexOf('e')+"<br>");
+    // indexOf trả ra vị trí xuất hiện đầu tiên 
+    // nếu có: vị trí, nếu ko: -1
+    document.writeln(myString.includes('e')+"<br>");
+    document.writeln(myString.split('') +"<br>");// tách chuỗi thành mảng, nếu truyền dấu cách hoặc 1 kí tự bất kì trong chuỗi vào ''thì cứ găpj dấu cách hoặc 1 kí tự bất kì trong chuôix nó sẽ tách ra thành 1 mảng
+    
+    let danhSach = [" Nguyen Van A", " Pham Tien Bach"," Luong Ngoc Bich"]
+    document.writeln(danhSach[1].startsWith("Pham")+"<br>");
+    // chuyển chuỗi về số
+    let so = "123"
+    document.writeln(typeof (so)+"<br>");
+    document.writeln(typeof (Number(so))+"<br>");
+    // parseInt(): chuyển chuỗi thành số nguen
+    //parseFloat(): chuyển chuỗi thành số thực
+
+    // toFixed() để nhận dạng số với số chữ số thập phân nhấtt định;
+    // var pi = 3.14159
+    // pi.toFixed(2); kết quả:'3.14
+    /** thuộc tính của Number
+     * ktra số
+     * isNaN(): kiểm tra xem 1 gtri có phải là NaN hay ko
+     * isFinite(): ktra xem 1 gtri có phai là số hữu hạn hay kô
+     * isNaN(NaN); kqua: true
+     * isFinite(10); kqa: true
+     * */
+    //hàm Date
+    let today = new Date();
+    // có thể tryền ngày theo ý muốn vào new Date()
+    document.writeln(today);
+    
+    
+    </script>
+</body>
+</html>
