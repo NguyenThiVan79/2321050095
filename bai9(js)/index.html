@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // mảng
+        let arr = [1, 2, 3, 4, 5, 'a','b',4, 5];
+        let z = "abc";
+        document.writeln(arr.length + "<br>");// độ dài mảng
+        document.writeln(arr[3] + "<br>"); // đọc phần tử trong mảng
+        document.writeln(arr.indexOf(4) + "<br>")// tìm trong mảng xem có gtri này ko và trả ra vtri đầu tiên của gtri đó
+        document.writeln(arr.lastIndexOf(4) + "<br>")// trả ra giá trị cuối cùng trong mnagr
+        document.writeln(Array.isArray(z)+ "<br>");// ktra xem có phải là 1 mảng ko
+        let a, b, c, d;
+        a = [1,2,3];
+        b = " JavaScript";
+        c = [ 42," hsdgdbc"];
+        d = a.concat(b,c); // nối các mange
+        d[3]= 4; // thay thế gtri của vtri thứ 3 thành số 4
+        e = d.pop();// lấy ra phần tử cuối của mảng
+        // z = d.shift();
+        // document.writeln(z + "<br>");
+                    // shift(): xóa phần từu đầu tiên
+                    //arr.shift();
+                    // unshift(): thêm ptu vào đầu mảng
+                    ///ar.unshift(0);
+        d.push("kiên")// thêm 1 phần tử vào vtri cuối cùng của mảng
+        document.writeln(d + "<br>");
+        document.writeln(d.join(" ")+ "<br>");// tách các mảng ngăn cách nhau bằng dấu -
+        document.writeln(e + "<br>");
+        document.writeln(d+ "<br>");
+        document.writeln(d.reverse() + "<br>");// đảo ngược lại các ptu trong mảng
+        // câu điều kiện If - else
+        let today = new Date();
+        let now = today.getHours();
+        if ( now < 10 ){
+            document.writeln(" chao buoi sang");
+        }
+            else  if (now >= 10 && now < 12){
+                document.writeln(" chao buoi trưa"+ "<br>");
+            }
+            else if ( now >= 12 && now < 17){
+                document.writeln(" chao buoi chiều");
+            }
+            else if ( now >= 17 && now < 22){
+                document.writeln(" chao buoi tối");
+            }
+        else {
+            document.writeln(" chao buoi đêm");
+        }
+
+        let so = "700000000005";
+        document.writeln(so[so.length - 1]);
+        let soCuoiCung = parseInt(so[so.length - 1]);
+        // kiểm tra số là số chẵn hay lẻ
+        if (so %2 ==0){
+           document.writeln(" là số chăn "); 
+        }
+        else {
+           document.writeln(" là số lẻ "); 
+        }
+        
+    
+        
+        
+    </script>
+</body>
+</html>
