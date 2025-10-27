@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      Cân nặng:
+      <input type="number" id="canNang" placeholder=" nhập cân nặng" />
+    </div>
+    <div>
+      Chiều cao: Cân nặng:
+      <input type="number" id="chieuCao" placeholder=" nhập chiều cao" />
+    </div>
+    <div><button onclick="xemKetQua">Tính chỉ số BMI</button></div>
+    <div>
+      Kiểm tra chỉ số BMI: <input type="text" id="ketQua" placeholder="" />
+    </div>
+    <script>
+      function xemKetQua() {
+        let canNang = parseFloat(document.getElementById("canNang").value);
+        let chieuCao = parseFloat(document.getElementById("chieuCao").value);
+
+        document.getElementById("ketQua").value = chiSoBMI(canNang, chieuCao);
+      }
+      function chiSoBMI() {
+        let chiSo;
+        if (kiemTra == true) {
+          chiSo = canNang / (chieuCao * chieuCao);
+        }
+      }
+      function kiemTra() {
+        let ketQua = true;
+        if ((canNang = "number")) {
+          document.writeln(
+            " vui lòng kiểm tra lại thông tin và không được bỏ trống thông tin" +
+              "<br>"
+          );
+          ketQua = false;
+        }
+        if ((chieuCao = "number")) {
+          document.writeln("Vui lòng kiểm tả lại thôn tin" + "<br>");
+          ketQua = false;
+        }
+        return ketQua;
+      }
+    </script>
+  </body>
+</html>

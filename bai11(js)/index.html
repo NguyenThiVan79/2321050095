@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bài 11</title>
+  </head>
+  <body>
+    <h1>bài 11</h1>
+    <h2>tính điểm</h2>
+    <div>
+      Điểm A: <input type="number" id="diema" placeholder=" nhập điểm" />
+    </div>
+    <div>
+      Điểm B: <input type="number" id="diemb" placeholder=" nhập điểm" />
+    </div>
+    <div>
+      Điểm C: <input type="number" id="diemc" placeholder=" nhập điểm" />
+    </div>
+    <div><button onclick="xemKetQua()">Tính điểm</button></div>
+    Kết quả:<input type="text" id="ketQua" />
+    <script>
+      function xemKetQua() {
+        let diema = parseFloat(document.getElementById("diema").value);
+        let diemb = parseFloat(document.getElementById("diemb").value);
+        let diemc = parseFloat(document.getElementById("diemc").value);
+        // document.writeln(tinhDiem(diema, diemb, diemc));
+        // document.writeln(typeof(diemA));
+        document.getElementById("ketQua").value = tinhDiem(diema, diemb, diemc);
+      }
+
+      function tinhDiem(a, b, c) {
+        let tong;
+        if (kiemTraHopLe(a, b, c) == true) {
+          tong = a * 0.6 + b * 0.3 + c * 0.1;
+
+          if (tong >= 9) {
+            return tong + "điểm chữ là A+";
+          } else if (tong >= 8.5 && tong < 9) return tong + " điểm chữ là A";
+          else if (tong >= 8 && tong < 8.5) return tong + " điểm chữ là B+";
+          else if (tong >= 7 && tong < 8) return tong + " điểm chữ là B";
+          else if (tong >= 6 && tong < 7) return tong + " điểm chữ là C+";
+          else if (tong >= 5.5 && tong < 6) return tong + " điểm chữ là C";
+          else if (tong >= 5 && tong < 5.5) return tong + " điểm chữ là D+";
+          else if (tong >= 4 && tong < 5) return tong + " điểm chữ là D";
+          else return tong + " điểm chữ là F";
+        }
+        /**   **/
+      }
+
+      function kiemTraHopLe(a, b, c) {
+        let ketQua = true;
+        if (a < 0 || a > 10 || typeof a != "number") {
+          document.writeln(" Điểm A ko hợp lệ" + "<br>");
+          ketQua = false;
+        }
+        if (b < 0 || b > 10 || typeof b != "number") {
+          document.writeln(" Điểm B ko hợp lệ" + "<br>");
+          ketQua = false;
+        }
+        if (c < 0 || c > 10 || typeof c != "number") {
+          document.writeln(" Điểm C ko hợp lệ" + "<br>");
+          ketQua = false;
+        }
+        return ketQua;
+      }
+    </script>
+  </body>
+</html>

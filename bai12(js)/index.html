@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2>Ví dụ về chế độ</h2>
+      <div class="anh">
+        <img src="mattroi.jpg" alt="" width="200px" />
+      </div>
+      <h2>Chế độ: Sáng</h2>
+      <div><button onclick="doiCheDo()">Đổi chế độ</button></div>
+    </div>
+    <script>
+      let cheDo = true; // biến quản lý trạng thái thì phải để ngôaif hàm
+      function doiCheDo() {
+        if (cheDo == true) {
+          document.getElementsByTagName("body")[0].style =
+            "background-color:black"; // trỏ đến đối tượng bằng tên của thẻ
+          document.getElementsByTagName("h2")[1].innerHTML = " Chế độ: Tối";
+          document.getElementsByTagName("h2")[0].style = "color: white";
+          document.getElementsByTagName("h2")[1].style = "color:white";
+          document.getElementsByTagName("img")[0].src = "mattrang.jpg";
+          cheDo = false;
+        } else {
+          document.getElementsByTagName("body")[0].style =
+            "background-color:white"; // trỏ đến đối tượng bằng tên của thẻ
+          document.getElementsByTagName("h2")[1].innerHTML = " Chế độ: Sáng";
+          document.getElementsByTagName("h2")[0].style = "color: black";
+          document.getElementsByTagName("h2")[1].style = "color: black";
+          document.getElementsByTagName("img")[0].src = "mattroi.jpg";
+          cheDo = true;
+        }
+      }
+    </script>
+  </body>
+</html>

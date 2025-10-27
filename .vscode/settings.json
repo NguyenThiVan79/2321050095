@@ -1,3 +1,4 @@
 {
-    "telemetry.editStats.showDecorations": true
+    "telemetry.editStats.showDecorations": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
