@@ -1,50 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tính chỉ số BMI</title>
+    <style>
+      body {
+        background-color: white;
+      }
+
+      .container {
+        background-color: rgb(234, 249, 234);
+        width: 500px;
+        margin: 50px auto;
+        padding: 20px 30px;
+        border-radius: 12px;
+        display: flex;
+      }
+
+      h1 {
+        text-align: center;
+        color: black;
+      }
+      div {
+        margin: 10px 0;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      button {
+        width: 105%;
+        padding: 10px;
+        background-color: pink;
+        color: rgba(4, 139, 212, 0.858);
+        border: #ccc;
+        border-radius: 6px;
+      }
+
+      button:hover {
+        background-color: rgb(210, 145, 156);
+      }
+
+      #hinhAnh {
+        text-align: center;
+        margin: auto;
+      }
+
+      img {
+        height: 350px;
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body>
-    <div>
-      Cân nặng:
-      <input type="number" id="canNang" placeholder=" nhập cân nặng" />
+    <div class="container">
+      <div class="nd-trai" style="width: 500px">
+        <h1>Tính chỉ số BMI</h1>
+
+        <div>
+          <label>Cân nặng (kg):</label>
+          <input type="number" id="canNang" placeholder="Nhập cân nặng" />
+        </div>
+
+        <div>
+          <label>Chiều cao (m):</label>
+          <input type="number" id="chieuCao" placeholder="Nhập chiều cao" />
+        </div>
+
+        <div>
+          <button onclick="xemKetQua()">Tính chỉ số</button>
+        </div>
+
+        <div>
+          <label>Kết quả:</label>
+          <input type="text" id="ketQua" readonly />
+        </div>
+      </div>
+      <div class="nd-phai" style="width: 500px">
+        <div id="hinhAnh"></div>
+      </div>
     </div>
-    <div>
-      Chiều cao: Cân nặng:
-      <input type="number" id="chieuCao" placeholder=" nhập chiều cao" />
-    </div>
-    <div><button onclick="xemKetQua">Tính chỉ số BMI</button></div>
-    <div>
-      Kiểm tra chỉ số BMI: <input type="text" id="ketQua" placeholder="" />
-    </div>
+
     <script>
       function xemKetQua() {
-        let canNang = parseFloat(document.getElementById("canNang").value);
         let chieuCao = parseFloat(document.getElementById("chieuCao").value);
+        let canNang = parseFloat(document.getElementById("canNang").value);
 
-        document.getElementById("ketQua").value = chiSoBMI(canNang, chieuCao);
-      }
-      function chiSoBMI() {
-        let chiSo;
-        if (kiemTra == true) {
-          chiSo = canNang / (chieuCao * chieuCao);
+        if (kiemTraHopLe(chieuCao, canNang)) {
+          tinhBMI(chieuCao, canNang);
+        } else {
+          document.getElementById("ketQua").value =
+            "Dữ liệu chưa hợp lệ, vui lòng nhập lại!!";
+          document.getElementById("anh").innerHTML = "";
         }
       }
-      function kiemTra() {
-        let ketQua = true;
-        if ((canNang = "number")) {
-          document.writeln(
-            " vui lòng kiểm tra lại thông tin và không được bỏ trống thông tin" +
-              "<br>"
-          );
-          ketQua = false;
+
+      function kiemTraHopLe(chieuCao, canNang) {
+        return (
+          canNang > 0 && chieuCao > 0 && !isNaN(canNang) && !isNaN(chieuCao)
+        );
+      }
+
+      function tinhBMI(chieuCao, canNang) {
+        let BMI = canNang / (chieuCao * chieuCao);
+
+        let hinhAnh = "";
+
+        if (BMI < 18.5) {
+          hinhAnh = "thieu.png";
+        } else if (BMI < 25) {
+          hinhAnh = "binhthuong.png";
+        } else if (BMI < 30) {
+          hinhAnh = "thua.png";
+        } else if (BMI < 40) {
+          hinhAnh = "beocapdo1.png";
+        } else {
+          hinhAnh = "beonang.png";
         }
-        if ((chieuCao = "number")) {
-          document.writeln("Vui lòng kiểm tả lại thôn tin" + "<br>");
-          ketQua = false;
-        }
-        return ketQua;
+
+        document.getElementById("ketQua").value = "BMI: " + BMI.toFixed(2);
+
+        document.getElementById("hinhAnh").innerHTML =
+          '<img src="' + hinhAnh + '" alt="Hình BMI" width="150">';
       }
     </script>
   </body>
