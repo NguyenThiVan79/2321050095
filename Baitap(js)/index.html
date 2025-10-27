@@ -96,7 +96,6 @@
         } else {
           document.getElementById("ketQua").value =
             "Dữ liệu chưa hợp lệ, vui lòng nhập lại!!";
-          document.getElementById("anh").innerHTML = "";
         }
       }
 
@@ -115,7 +114,7 @@
           hinhAnh = "thieu.png";
         } else if (BMI < 25) {
           hinhAnh = "binhthuong.png";
-        } else if (BMI < 30) {git add .BMI
+        } else if (BMI < 30) {
           hinhAnh = "thua.png";
         } else if (BMI < 40) {
           hinhAnh = "beocapdo1.png";
@@ -124,7 +123,6 @@
         }
 
         document.getElementById("ketQua").value = "BMI: " + BMI.toFixed(2);
-
         document.getElementById("hinhAnh").innerHTML =
           '<img src="' + hinhAnh + '" alt="Hình BMI" width="150">';
       }
