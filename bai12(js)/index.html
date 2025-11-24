@@ -17,7 +17,10 @@
     </div>
     <script>
       let cheDo = true; // biến quản lý trạng thái thì phải để ngôaif hàm
+      // hoặc có thể để let cheDO = "sang"
       function doiCheDo() {
+        // có 3 loại để trỏ đến đtg: id; class; tên đối tượng
+        
         if (cheDo == true) {
           document.getElementsByTagName("body")[0].style =
             "background-color:black"; // trỏ đến đối tượng bằng tên của thẻ
@@ -25,7 +28,7 @@
           document.getElementsByTagName("h2")[0].style = "color: white";
           document.getElementsByTagName("h2")[1].style = "color:white";
           document.getElementsByTagName("img")[0].src = "mattrang.jpg";
-          cheDo = false;
+          cheDo = false; // cheDo = "toi"
         } else {
           document.getElementsByTagName("body")[0].style =
             "background-color:white"; // trỏ đến đối tượng bằng tên của thẻ
@@ -33,7 +36,7 @@
           document.getElementsByTagName("h2")[0].style = "color: black";
           document.getElementsByTagName("h2")[1].style = "color: black";
           document.getElementsByTagName("img")[0].src = "mattroi.jpg";
-          cheDo = true;
+          cheDo = true; // cheDo = "sang"
         }
       }
     </script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <img src="anh/anhbiamuado.jpg">
+    <h1>tên: Mưa đỏ</h1>
+    <div style="display: flex; justify-content: space-between;">
+        <h1 onclick="chonPhim(1)">Mưa đỏ</h1>
+        <h1 onclick="chonPhim(2)"> nhà gia tiên </h1>
+        <h1 onclick="chonPhim(3)"> tử chiến trên không</h1>
+    </div>
+    <script>
+        let danhSachPhim=[
+            {
+                id: 1,
+                ten: "Mưa đỏ ",
+                anh: "anh/anhbiamuado.jpg",
+
+            },
+            {
+                id: 2,
+                ten: " nhà gia tiên",
+                anh: "anh/nhagiatien.jpg",
+
+            },
+            {
+                id: 3,
+                ten: "tử chiến trên không",
+                anh: "anh/tuchientren_khong.jpg",
+
+            },
+
+        ];
+        let phimHienTai = danhSachPhim[0];
+            
+        function chonPhim(id){
+           
+            for ( let i = 0; i < danhSachPhim.length; i ++){
+                if( id == danhSachPhim[i].id){
+                    phimHienTai = danhSachPhim[i];
+                }
+            }
+            document.getElementsByTagName('img')[0].src = phimHienTai.anh;
+            document.getElementsByTagName('h1')[0].innerHTML = " Tên phim:" + phimHienTai.ten;
+        }
+
+        
+    </script>
+</body>
+</html>

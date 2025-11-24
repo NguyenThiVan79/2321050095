@@ -60,7 +60,8 @@
   <body>
     <div class="container">
       <div class="nd-trai" style="width: 500px">
-        <h1>Tính chỉ số BMI</h1>
+        <h1 style="text-align: center;
+        color: black;">Tính chỉ số BMI</h1>
 
         <div>
           <label>Cân nặng (kg):</label>
@@ -96,8 +97,10 @@
         } else {
           document.getElementById("ketQua").value =
             "Dữ liệu chưa hợp lệ, vui lòng nhập lại!!";
+          document.getElementById('hinhAnh').innerHTML = "";
+            }
         }
-      }
+      
 
       function kiemTraHopLe(chieuCao, canNang) {
         return (
@@ -108,23 +111,22 @@
       function tinhBMI(chieuCao, canNang) {
         let BMI = canNang / (chieuCao * chieuCao);
 
-        let hinhAnh = "";
+        let anh = "";
 
         if (BMI < 18.5) {
-          hinhAnh = "thieu.png";
+          anh = "thieu.png";
         } else if (BMI < 25) {
-          hinhAnh = "binhthuong.png";
+          anh = "binhthuong.png";
         } else if (BMI < 30) {
-          hinhAnh = "thua.png";
+          anh = "thua.png";
         } else if (BMI < 40) {
-          hinhAnh = "beocapdo1.png";
+          anh = "beocapdo1.png";
         } else {
-          hinhAnh = "beonang.png";
+          anh = "beonang.png";
         }
 
         document.getElementById("ketQua").value = "BMI: " + BMI.toFixed(2);
-        document.getElementById("hinhAnh").innerHTML =
-          '<img src="' + hinhAnh + '" alt="Hình BMI" width="150">';
+        document.getElementById("hinhAnh").innerHTML ='<img src="'+ anh + '" alt="Hình BMI" width="150">';
       }
     </script>
   </body>

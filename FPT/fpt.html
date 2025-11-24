@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        
+    </style>
 </head>
 
 <body>
@@ -25,11 +30,13 @@
             </nav>
             <!-- Chức năng -->
             <div class="chucnang">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-bell" aria-hidden="true"></i>
                 <div>
-                    <button class="muagoi">Mua Gói</button>
+                    <button class="muagoi" >Mua Gói</button>
                 </div>
                 <div>
-                    <button class="dangnhap">Đăng nhập</button>
+                    <button class="dangnhap" >Đăng nhập</button>
                 </div>
             </div>
         </div>
@@ -39,11 +46,23 @@
             <img src="/FPT/fpt-1.jpg" alt="">
         </div>
         <div class="container">
-            <div>
-                <div style="display: flex; justify-content: center;">
-                    <img class="banner" src="/FPT/muado.jpg" alt="">
+            <div >
+                <div  class="banner" style="display:block; justify-content: center;position: relative; ">
+                    <img class="banner"  src="/FPT/anhbiamuado.jpg" alt="">
+                    <div class="danhsach-tt" style="  position: absolute; bottom:15px; color: white; ; border-radius: 5px; ">
+                       <div class="tt" >
+                            <ul >
+                                <li class="nam" style="list-style: none;">2025</li>
+                                <li class="tuoi">16T</li>
+                                <li class="thoiluong">2 giờ</li>
+                                <li class="nation">Việt Nam</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="xemNgay" style=" padding: 10px;font-size: 18px;background-color: rgb(245, 57, 57);position: absolute;bottom: 5px; left:10px; color: white;border: none;border-radius: 6px;" onclick= "xemNgay()" >Xem ngay</button>
                 </div>
-                <div style="display: flex; justify-content: center;">
+                <div> <iframe class="trailer" style="height:500px; display: none" width="100%" src="https://www.youtube.com/embed/BD6PoZJdt_M?si=_ASgJlHyXMzHbrVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div style="display: flex; justify-content: center; align-items: start">
                     <img class="qc" src="/FPT/qc.1.jpg" alt="">
                 </div>
             </div>
@@ -52,44 +71,44 @@
                     <h2>Phim chiếu rạp</h2>
                 </div>
                 <div class="danhsach">
-                    <div class="phim">
-                        <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                    <div class="phim" >
+                        <div class="anh" >
+                            <img onclick="chonPhim(1)" src="350x495-muado.jpg" alt="">
                         </div>
                         <div class="ten">
                             Mưa đỏ
                         </div>
                     </div>
                     <div class="phim">
-                        <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                        <div class="anh" >
+                            <img onclick="chonPhim(2)" src="diadao.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Mưa đỏ
+                            Địa Đạo
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img onclick="chonPhim(3)" src="mangmedibo.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Mưa đỏ
+                            Mang mẹ đi bỏ
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img onclick="chonPhim(4)" src="quynhaptrang.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Mưa đỏ
+                            Quỷ nhập tràng
                         </div>
                     </div>
                     <div class="phim">
-                        <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                        <div class="anh" style="height:100">
+                            <img onclick="chonPhim(5)" src="botubaothu.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Mưa đỏ
+                            Bộ tứ báo thủ
                         </div>
                     </div>
                 </div>
@@ -102,7 +121,7 @@
                 <div class="danhsach">
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/Screenshot 2025-09-15 100838.png" alt="">
+                            <img onclick="chonPhim(6)" src="/FPT/Screenshot 2025-09-15 100838.png" alt="">
                         </div>
                         <div class="ten">
                             Gia đình là số một ( Phần 1)
@@ -110,7 +129,7 @@
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/hồ sơ x.png" alt="">
+                            <img onclick="chonPhim(7)" src="/FPT/hồ sơ x.png" alt="">
                         </div>
                         <div class="ten">
                             Hồ sơ X
@@ -118,7 +137,7 @@
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/pháp sư vô tâm.png" alt="">
+                            <img onclick="chonPhim(8)" src="/FPT/pháp sư vô tâm.png" alt="">
                         </div>
                         <div class="ten">
                             Pháp sư vô tâm
@@ -126,7 +145,7 @@
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/vươhht lên định kiến.png" alt="">
+                            <img onclick="chonPhim(9)" src="/FPT/vươhht lên định kiến.png" alt="">
                         </div>
                         <div class="ten">
                             Vượt lên đinh kiến
@@ -134,7 +153,7 @@
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/ngô nhà bí mật.png" alt="">
+                            <img onclick="chonPhim(10)" src="/FPT/ngô nhà bí mật.png" alt="">
                         </div>
                         <div class="ten">
                             Ngôi nhà bí mật
@@ -149,42 +168,42 @@
                 <div class="danhsach">
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img onclick="chonPhim(11)" src="tuchientren_khong.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Trăm mảnh ký ức
+                            Tử chiến trên không
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img onclick="chonPhim(12)" src="waybacklove.jpeg" alt="">
                         </div>
                         <div class="ten">
-                            Phó sơn hải
+                            Way back love
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img onclick="chonPhim(13)" src="nhagiatien.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Lời chào cuối cùng
+                            Nhà gia tiên
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img onclick="chonPhim(14)" src="latmat8.jpg" alt="">
                         </div>
                         <div class="ten">
-                           Ngôi nhà bí mật
+                           Lật mặt 8
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img onclick="chonPhim(15)" src="botubaothu.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Xúc Xắc sinh tử
+                            Bộ tứ báo thủ
                         </div>
                     </div>
                 </div>
@@ -196,42 +215,42 @@
                 <div class="danhsach">
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img  src="khododanh.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Trăm mảnh ký ức
+                            Khó dỗ dành
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img  style="width:100%; height:350px" src="khomlung.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Phó sơn hải
+                            Khom lưng
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img  src="khucbientauanhtrang.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Xét nghiệm 
+                            Khúc biến tấu ánh trăng 
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img  src="laydanhnghianguoinha.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Ngôi nhà bí mật
+                            Lấy danh nghĩa người nhà
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img  src="waybacklove.jpeg" alt="">
                         </div>
                         <div class="ten">
-                            Thanh xuân của tôi
+                           Way back love
                         </div>
                     </div>
                 </div>
@@ -243,15 +262,15 @@
                 <div class="danhsach">
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img src="latmat8.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Ngày xưa có một chuyện tình
+                            Lật mặt 8 
                         </div>
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img src="botubaothu.jpg" alt="">
                         </div>
                         <div class="ten">
                             Bộ tứ báo thủ
@@ -259,7 +278,7 @@
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img src="diadao.jpg" alt="">
                         </div>
                         <div class="ten">
                             Địa đạo: Mặt trời trong bóng tối
@@ -267,10 +286,10 @@
                     </div>
                     <div class="phim">
                         <div class="anh">
-                            <img src="/FPT/350x495-muado.jpg" alt="">
+                            <img src="nhagiatien.jpg" alt="">
                         </div>
                         <div class="ten">
-                            Mai
+                            Nhà gia tiên
                         </div>
                     </div>
                     <div class="phim">
@@ -279,6 +298,53 @@
                         </div>
                         <div class="ten">
                             Mưa đỏ
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="theloai">
+                <div class="tentheloai">
+                   <h2> Phim Hoạt Hình</h2>
+                </div>
+                <div class="danhsach">
+                    <div class="phim">
+                        <div class="anh">
+                            <img src="conan.jpg" alt="">
+                        </div>
+                        <div class="ten">
+                            Conan 
+                        </div>
+                    </div>
+                    <div class="phim">
+                        <div class="anh">
+                            <img src="lavar.jpg">
+                        </div>
+                        <div class="ten">
+                            Ấu trùng tinh nghịch
+                        </div>
+                    </div>
+                    <div class="phim">
+                        <div class="anh">
+                            <img src="Mashavagau.jpg" alt="">
+                        </div>
+                        <div class="ten">
+                            Masha anh gau
+                        </div>
+                    </div>
+                    <div class="phim">
+                        <div class="anh">
+                            <img src="doreamon.jpg" alt="">
+                        </div>
+                        <div class="ten">
+                            Doreamon
+                        </div>
+                    </div>
+                    <div class="phim">
+                        <div class="anh">
+                            <img src="yourname.jpg" alt="">
+                        </div>
+                        <div class="ten">
+                            Your Name
                         </div>
                     </div>
                 </div>
@@ -339,6 +405,7 @@
         </div>
         </div>
     </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
